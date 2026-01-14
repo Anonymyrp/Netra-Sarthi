@@ -57,7 +57,7 @@ const Navbar = () => {
                 </div>
                 <div className="hidden sm:block">
                   <h1 className="text-xl font-bold text-gray-800">
-                    Vidya Prabodhini
+                    Netra Sarthi
                   </h1>
                   <p className="text-xs text-gray-600">Prashala</p>
                 </div>
