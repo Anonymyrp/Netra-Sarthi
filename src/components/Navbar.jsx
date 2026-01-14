@@ -35,9 +35,8 @@ const Navbar = () => {
   };
 
   const handleRecordings = () => {
-    console.log("Recordings clicked");
-    // Your recordings logic
-  };
+  navigate("/Recordings"); // This will navigate to the Recordings page
+};
 
   return (
     <>
