@@ -13,7 +13,8 @@ function App() {
     createRoutesFromElements(
      <Route path='/' element={<Layout/>}>
       <Route path="/" element={<Home/>}/>
-      <Route path="Recordings" element={<Recordings/>}/>
+      // App.jsx
+      <Route path="recordings" element={<Recordings/>}/>
      </Route>
     )
   );
