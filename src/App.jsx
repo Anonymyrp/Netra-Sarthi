@@ -7,17 +7,23 @@ import {
 } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
-import Recordings from "./pages/Recordings";
+import RecordingsPage from "./pages/RecordingsPage";
+import LiveLocationPage from "./pages/LiveLocationPage"; // Create this
+import PassLocationPage from "./pages/PassLocationPage"; // Create this
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-     <Route path='/' element={<Layout/>}>
-      <Route path="/" element={<Home/>}/>
-      // App.jsx
-      <Route path="recordings" element={<Recordings/>}/>
-     </Route>
+      <Route path='/' element={<Layout/>}>
+        <Route index element={<Home/>}/>
+        <Route path="recordings" element={<RecordingsPage/>}/>
+        <Route path="live-location" element={<LiveLocationPage/>}/>
+        <Route path="pass-location" element={<PassLocationPage/>}/>
+        {/* Add more routes here as needed */}
+      </Route>
     )
   );
+  
   return <RouterProvider router={router} />;
 }
 
