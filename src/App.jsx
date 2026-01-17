@@ -8,8 +8,8 @@ import {
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import RecordingsPage from "./pages/RecordingsPage";
-import LiveLocationPage from "./pages/LiveLocationPage"; // Create this
-import PassLocationPage from "./pages/PassLocationPage"; // Create this
+import LiveLocationPage from "./pages/LiveLocationPage";
+import PassLocationPage from "./pages/PassLocationPage";
 
 function App() {
   const router = createBrowserRouter(
@@ -18,8 +18,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="recordings" element={<RecordingsPage/>}/>
         <Route path="live-location" element={<LiveLocationPage/>}/>
-        <Route path="pass-location" element={<PassLocationPage/>}/>
-        {/* Add more routes here as needed */}
+        <Route path="pass-location" element={<PastLocationPage/>}/>
       </Route>
     )
   );

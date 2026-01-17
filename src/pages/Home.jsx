@@ -1,4 +1,3 @@
-// Updated Home.jsx with functional buttons
 import React from 'react';
 import { MapPin, Camera, Radio } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -31,13 +30,13 @@ function Home() {
             Location Services
           </h2>
           <p className="text-gray-600 text-lg mb-12">
-            Manage your location tracking and recordings with our comprehensive suite of tools
+            Click on any service to access its dedicated page
           </p>
         </div>
 
         {/* Functional Feature Cards with Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {/* Live Location Card - Navigates to Live Location Page */}
+          {/* Live Location Card */}
           <Link 
             to="/live-location"
             className="group relative overflow-hidden bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 shadow-lg border border-blue-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
@@ -77,13 +76,13 @@ function Home() {
               </div>
               
               <div className="mt-6 text-blue-600 font-semibold flex items-center gap-2">
-                <span>Open Live Location</span>
+                <span>Access Live Location</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
           </Link>
 
-          {/* Pass Location Card - Navigates to Pass Location Page */}
+          {/* Pass Location Card */}
           <Link 
             to="/pass-location"
             className="group relative overflow-hidden bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-8 shadow-lg border border-emerald-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
@@ -120,13 +119,13 @@ function Home() {
               </div>
               
               <div className="mt-6 text-emerald-600 font-semibold flex items-center gap-2">
-                <span>Open Pass Location</span>
+                <span>Access Pass Location</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
           </Link>
 
-          {/* Recordings Card - Navigates to Recordings Page */}
+          {/* Recordings Card */}
           <Link 
             to="/recordings"
             className="group relative overflow-hidden bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 shadow-lg border border-purple-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
@@ -163,7 +162,7 @@ function Home() {
               </div>
               
               <div className="mt-6 text-purple-600 font-semibold flex items-center gap-2">
-                <span>Open Recordings</span>
+                <span>Access Recordings</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
@@ -203,6 +202,33 @@ function Home() {
                 Configure preferences and access all features
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Quick Links Section */}
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-bold text-gray-800 mb-8">
+            Quick Access Links
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to="/live-location"
+              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-200"
+            >
+              Go to Live Location
+            </Link>
+            <Link
+              to="/pass-location"
+              className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-200"
+            >
+              Go to Pass Location
+            </Link>
+            <Link
+              to="/recordings"
+              className="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-200"
+            >
+              Go to Recordings
+            </Link>
           </div>
         </div>
       </div>
