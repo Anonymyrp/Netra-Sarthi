@@ -35,8 +35,8 @@ const Navbar = () => {
   };
 
   const handleRecordings = () => {
-  navigate("/Recordings"); // This will navigate to the Recordings page
-};
+    navigate("/recordings"); // Fixed: lowercase "recordings"
+  };
 
   return (
     <>
@@ -58,7 +58,6 @@ const Navbar = () => {
                   <h1 className="text-xl font-bold text-gray-800">
                     Netra Sarthi
                   </h1>
-                  <p className="text-xs text-gray-600">Prashala</p>
                 </div>
               </div>
             </Link>
@@ -76,7 +75,7 @@ const Navbar = () => {
               ))}
             </nav>
 
-            {/* Location Action Buttons */}
+            {/* Location Action Buttons - Using Link for Recordings */}
             <div className="hidden lg:flex items-center space-x-2">
               <button
                 onClick={handleLiveLocation}
@@ -91,16 +90,16 @@ const Navbar = () => {
                 className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 font-medium"
               >
                 <MapPin size={18} />
-                <span>Pass Location</span>
+                <span>Past Location</span>
               </button>
               
-              <button
-                onClick={handleRecordings}
+              <Link
+                to="/recordings"
                 className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 font-medium"
               >
                 <Camera size={18} />
                 <span>Recordings</span>
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -155,16 +154,14 @@ const Navbar = () => {
                   <span>Pass Location</span>
                 </button>
                 
-                <button
-                  onClick={() => {
-                    handleRecordings();
-                    setIsMobileMenuOpen(false);
-                  }}
+                <Link
+                  to="/recordings"
                   className="w-full flex items-center justify-center space-x-2 py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Camera size={20} />
                   <span>Recordings</span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -175,13 +172,13 @@ const Navbar = () => {
       {!isMobileMenuOpen && (
         <div className="lg:hidden fixed bottom-6 right-6 z-40">
           <div className="flex flex-col space-y-3">
-            <button
-              onClick={handleRecordings}
+            <Link
+              to="/recordings"
               className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all"
               title="Recordings"
             >
               <Camera size={22} />
-            </button>
+            </Link>
             <button
               onClick={handlePassLocation}
               className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all"
